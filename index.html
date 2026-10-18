@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Ernst Sastre - Web CV</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #fcfcfc;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        /* Columna Izquierda (Perfil y Contacto) */
+        .sidebar {
+            flex: 1 1 260px;
+            max-width: 300px;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 3px solid #e2e8f0;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            text-align: center;
+            color: #1a202c;
+            margin-bottom: 5px;
+        }
+        .sidebar .subtitle {
+            font-size: 14px;
+            text-align: center;
+            color: #718096;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .info-list {
+            list-style: none;
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            word-break: break-word;
+        }
+        .info-list a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        .info-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Columna Derecha (Contenido Principal) */
+        .main-content {
+            flex: 2 1 500px;
+        }
+        .bio {
+            font-size: 15px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            border-left: 4px solid #3182ce;
+            padding-left: 15px;
+            font-style: italic;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            margin-top: 35px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .main-content .section-title:first-of-type {
+            margin-top: 0;
+        }
+        
+        /* Items de Experiencia y Educación */
+        .item {
+            margin-bottom: 25px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2b6cb0;
+        }
+        .item-company {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        .item-date {
+            font-size: 13px;
+            color: #a0aec0;
+            font-weight: 500;
+        }
+        .item ul {
+            margin-top: 8px;
+            padding-left: 20px;
+            font-size: 14.5px;
+            color: #4a5568;
+        }
+        .item ul li {
+            margin-bottom: 4px;
+        }
+
+        /* Skills Badges */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .skill-tag {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #bee3f8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                gap: 30px;
+            }
+            .sidebar {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra Lateral (Foto e Información Personal) -->
+        <aside class="sidebar">
+            <img src="./foto.jpg" alt="Pablo Ernst Sastre" class="profile-img">
+            <h1>Pablo Ernst Sastre</h1>
+            <div class="subtitle">Mechanical Engineer</div>
+
+            <ul class="info-list">
+                <li>📍 Poblete, Ciudad Real, España</li>
+                <li>📧 <a href="mailto:PABLO.ERNSTS@OUTLOOK.ES">PABLO.ERNSTS@OUTLOOK.ES</a></li>
+                <li>📞 +34 646 13 82 02</li>
+                <li>💼 <a href="https://www.linkedin.com/in/pablo-ernst-sastre-004150196" target="_blank">LinkedIn Profile</a></li>
+            </ul>
+
+            <h2 class="section-title">Languages</h2>
+            <ul class="info-list">
+                <li>🇪🇸 <strong>Spanish:</strong> Native (98%)</li>
+                <li>🇬🇧 <strong>English:</strong> B2 Level (85%)</li>
+            </ul>
+
+            <h2 class="section-title">Interests</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Finance & Economics</span>
+                <span class="skill-tag">Programming / CS</span>
+                <span class="skill-tag">Investments</span>
+                <span class="skill-tag">Sports</span>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <div class="bio">
+                "It always seems impossible... until it's done." – Nelson Mandela
+            </div>
+
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">QATRO Test Engineer</span>
+                    <span class="item-date">01/11/2022 - Present</span>
+                </div>
+                <div class="item-company">QATRO ELEC ISEI</div>
+                <ul>
+                    <li>Vibration testing (balancing, modal analysis, frequency domain analysis).</li>
+                    <li>Predictive maintenance in hydroelectric power plants (vibration, thermography, oil analysis, insulation).</li>
+                    <li>Efficiency tests (pressures, flow rates, temperatures, power).</li>
+                    <li>Development of measurement and instrumentation systems.</li>
+                    <li>Team management & preparation of technical reports.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Industrial Safety Inspector</span>
+                    <span class="item-date">12/04/2021 - 31/10/2022</span>
+                </div>
+                <div class="item-company">Applus+ OC</div>
+                <ul>
+                    <li>Inspection of Lifting Equipment and Low-Voltage (LV) / High-Voltage (HV) installations.</li>
+                    <li>Inspection of public assembly areas, outdoor lighting, HV lines, and transformer substations.</li>
+                    <li>Application of applicable regulations (ITCs) and issuance of certificates/reports.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Quality Assurance Engineer</span>
+                    <span class="item-date">02/2020 - 11/11/2020</span>
+                </div>
+                <div class="item-company">BPPCS S.A.</div>
+                <ul>
+                    <li>8Ds, Internal audits, continuous improvement, PPAP approvals, 5S methodology.</li>
+                    <li>ISO 9001-14001, IATF compliance and Metrology.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Education</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Master's in Big Data & AI</span>
+                    <span class="item-date">2025 - 2027</span>
+                </div>
+                <div class="item-company">Alfonso X el Sabio University</div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Mechanical Engineering Degree</span>
+                    <span class="item-date">2014 - 2020</span>
+                </div>
+                <div class="item-company">ETSII Ciudad Real</div>
+            </div>
+
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">ML & DL</span>
+                <span class="skill-tag">DevOps</span>
+                <span class="skill-tag">Cloud / AWS</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">LabVIEW</span>
+                <span class="skill-tag">SolidWorks</span>
+                <span class="skill-tag">AutoCAD</span>
+                <span class="skill-tag">VBA</span>
+                <span class="skill-tag">Instrumentation</span>
+                <span class="skill-tag">DS Analyzers</span>
+                <span class="skill-tag">Electricity</span>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
